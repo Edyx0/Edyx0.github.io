@@ -9183,6 +9183,7 @@ body.other-page .other-project__frame img {
   body.other-page .other-index--lokal {
     grid-column: 8 / -1;
     grid-row: 1 / 7;
+    overflow: visible;
   }
 
   body.other-page .other-index:not(.other-index--lokal):not(.other-index--imposter) {
@@ -9239,10 +9240,12 @@ body.other-page .other-project__frame img {
   }
 
   body.other-page .other-index--lokal .other-project__identity {
-    left: 62%;
+    left: auto;
+    right: 3%;
     top: 58%;
     bottom: auto;
-    width: 36%;
+    width: 35%;
+    container-type: inline-size;
     justify-items: start;
     text-align: left;
   }
@@ -9253,12 +9256,15 @@ body.other-page .other-project__frame img {
   }
 
   body.other-page .other-index--lokal .other-project__identity > .other-project__title-line > span {
-    font-size: clamp(2.5rem, 3.2vw, 3.8rem);
+    max-width: 100%;
+    font-size: clamp(2rem, 25cqw, 3.5rem);
   }
 
   body.other-page .other-index--lokal .other-project__identity > small {
+    box-sizing: border-box;
     max-width: 100%;
     font-size: clamp(0.68rem, 0.72vw, 0.78rem);
+    overflow-wrap: anywhere;
     text-align: left;
   }
 

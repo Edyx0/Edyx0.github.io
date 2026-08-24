@@ -21,7 +21,7 @@ const classes = [
   bodyClass,
   bodyClass.split(/\s+/).includes('home') ? 'font-loading' : '',
 ].filter(Boolean).join(' ');
-const defaultSpotifyStatusEndpoint = 'https://edizy-spotify-status.kickle-edizy.workers.dev';
+const defaultSpotifyStatusEndpoint = 'https://edizy-spotify-status.edizy.workers.dev';
 const spotifyStatusEndpoint = import.meta.env.PUBLIC_SPOTIFY_STATUS_ENDPOINT?.trim() || defaultSpotifyStatusEndpoint;
 const siteURL = Astro.site ?? new URL(Astro.url.origin);
 const canonicalURL = new URL(Astro.url.pathname, siteURL);
